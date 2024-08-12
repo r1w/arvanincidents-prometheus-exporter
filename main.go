@@ -123,7 +123,7 @@ func main() {
 		}
 	}()
 
-	// Start the main HTTP server
+	// Start the main HTTP server.
 	fmt.Println("Starting server on :8080")
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
