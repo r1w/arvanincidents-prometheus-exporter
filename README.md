@@ -20,12 +20,12 @@ The **Incident Status Prometheus Exporter** is a Prometheus exporter designed to
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/r1w/arvanstatus-prometheus-exporter.git
+    git clone https://github.com/r1w/arvanincidents-prometheus-exporter.git
     ```
 
 2. **Navigate into the directory:**
     ```bash
-    cd incident-status-prometheus-exporter
+    cd arvanstatus-prometheus-exporter
     ```
 
 3. **Build the project:**
