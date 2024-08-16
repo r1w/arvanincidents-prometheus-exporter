@@ -145,7 +145,7 @@ func updateMetrics(apiResponse APIResponse) {
 func startPrometheusServer() {
 	log.Println("Starting Prometheus metrics server on :8001")
 	http.Handle("/metrics", promhttp.Handler())
-	log.Fatal(http.ListenAndServe(":8001", nil))
+	log.Fatal(http.ListenAndServe("192.168.1.1:8001", nil))
 }
 
 // periodicDataFetch periodically fetches API data and updates metrics
