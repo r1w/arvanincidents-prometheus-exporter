@@ -44,9 +44,11 @@ Add the following job to your Prometheus `prometheus.yml` configuration file:
 
 ```yaml
 scrape_configs:
-  - job_name: 'incident_status'
-    static_configs:
-      - targets: ['localhost:8000']
+   - job_name: 'incident_status'
+     static_configs:
+        - targets: ['0.0.0.0:8001']
+          labels:
+             container: 'incident_status'
 ```
 
 Restart Prometheus:
