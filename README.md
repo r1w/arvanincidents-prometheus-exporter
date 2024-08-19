@@ -121,13 +121,13 @@ The exporter tracks incidents categorized into three types. These types describe
 
 Command-line Flags
 
-    --port: Specify the port on which the exporter listens (default: 8000).
+    --port: Specify the port on which the exporter listens (default: 8001).
     --interval: Set the interval for fetching incident data (default: 60s).
 
 Example:
 
 ```bash
-./incident-status-exporter --port 9090 --interval 120s
+./incident-status-exporter --port 8001 --interval 120s
 ```
 
 Features
@@ -153,11 +153,27 @@ Environment Variables:
 Example:
 
 ```bash
-export EXPORTER_PORT=9090
+export EXPORTER_PORT=8001
 export SCRAPE_INTERVAL=120s
 ./incident-status-exporter
 ```
 
+## Building and Running the Docker Image
+
+### Build the Image
+
+To build the Docker image, run the following command:
+
+```bash
+docker build -t arvanincident/arvanincident:1.0.0 .
+```
+Run the Container
+
+To run the Docker container with a custom name and port, use the following command:
+
+```bash
+docker run --name arvanincident -p 8002:8002 arvanincident/arvanincident:1.0.0
+```
 Contributing
 ============
 
