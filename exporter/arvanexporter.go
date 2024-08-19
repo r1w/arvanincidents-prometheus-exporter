@@ -15,7 +15,7 @@ import (
 func fetchAPIData() {
 	log.Println("Fetching API data...")
 
-	url := "https://statuspal.io/api/v2/status_pages/arvancloud/incidents" // Replace with your actual API URL
+	url := "https://statuspal.io/api/v2/status_pages/arvancloud/incidents"
 	resp, err := http.Get(url)
 	if err != nil {
 		log.Printf("Error fetching data from API: %v", err)
